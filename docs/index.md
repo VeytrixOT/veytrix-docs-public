@@ -6,7 +6,7 @@
 
 # A clearer view of critical operations.
 
-Veytrix is being designed to connect OT asset discovery with evidence, relationships, and security context—so teams can understand what they see and why it matters.
+Veytrix is in development. Shared contract validation and local dependency tooling have been implemented and locally tested. The wider foundation—including Central, Sensor and Web applications—and the inventory product remain in development; there is no deployed discovery or asset platform.
 
 [Explore the platform](platform/overview.md){ .veytrix-button } [See the architecture](platform/how-it-works.md){ .veytrix-link }
 
@@ -36,8 +36,8 @@ An address is not an identity. Veytrix's proposed model links observations to ex
 
 | Explore | Learn |
 | --- | --- |
-| [How Veytrix works](platform/how-it-works.md) | The site sensor, Central, log context, and evidence flow. |
-| [Delivery roadmap](platform/roadmap.md) | What is planned for the initial product and later phases. |
+| [How Veytrix is designed to work](platform/how-it-works.md) | The intended workflow and what remains planned. |
+| [Delivery roadmap](platform/roadmap.md) | Foundation work, real-data validation, and later milestones. |
 | [Developer repository map](developers/repositories.md) | Where contracts, sensor code, services, and UI belong. |
 
 !!! info "Product status"

@@ -1,6 +1,6 @@
 # Data and plugin concepts
 
-The core workflow separates four concepts:
+The planned data model separates four concepts; implementation and released interfaces may change these descriptions:
 
 | Concept | Meaning |
 | --- | --- |
@@ -9,6 +9,6 @@ The core workflow separates four concepts:
 | Canonical asset | A reconciled identity whose selected fields can be explained by evidence. |
 | Relationship | A time-aware link between assets, interfaces, addresses, networks, or protocols. |
 
-Parsers produce observations. Passive fingerprint plugins produce candidate evidence. Reconciliation selects or flags asset identity; plugins do not directly overwrite canonical records. The graph is a projection of durable asset relationships, while detailed event history stays in search-oriented storage.
+In the intended workflow, sources produce observations, interpretation adds evidence, and reconciliation would select or flag asset identity. These are design concepts, not currently available parsers, plugins, reconciliation services, or graph views.
 
-`veytrix-schemas` is the future source of released wire formats; the descriptions here are conceptual and may change as contracts are validated. For implementation-specific setup, consult each repository's README when its code is available.
+Shared contract validation foundations exist, but no wire format has been released and no public product or service is available. These descriptions are conceptual and may change as the work progresses. Consult each implementation repository's README for its current status and setup.

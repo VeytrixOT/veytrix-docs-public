@@ -1,14 +1,16 @@
 # How Veytrix is designed to work
 
-1. **Observe at the site.** A sensor receives SPAN/TAP traffic. Zeek and industrial parsers turn sessions into normalized observations; passive plugins interpret protocol identifiers and behavior.
-2. **Preserve evidence.** Each identity claim retains its source, method, time, and confidence. A device's IP address is supporting evidence, never sufficient identity by itself.
-3. **Correlate centrally.** Central receives site-originated data over an outbound authenticated connection, reconciles asset identities, and projects condensed relationships. The sensor queues important evidence when Central is unavailable.
-4. **Add context.** Selected Cribl-routed logs in Elastic can contribute time-aware context. Kibana remains the SOC search and alert interface; Veytrix provides the asset and relationship view.
+The following describes the intended workflow; these components and capabilities are still in development and are not available as a deployed platform.
+
+1. **Observe at the site (planned).** A site sensor is intended to process mirrored traffic passively. Which records and device signals are useful must be determined from real lab data; vendor coverage is not yet validated.
+2. **Preserve evidence (planned).** Observations and identity claims are intended to retain their sources and uncertainty. An IP address alone is not enough to establish an asset identity.
+3. **Correlate centrally (planned).** Site-originated observations are intended to support explainable asset identity and relationships. Handling interruptions and offline retention still require implementation and validation.
+4. **Add context later (planned).** Existing logs and external integrations are later work, not prerequisites for the initial passive milestone.
 
 ## Controlled operations
 
-Future active identification is designed around named, narrow capabilities such as reading a device identity. Central may request one, but site-local policy and runtime limits must authorize and enforce it. Generic remote shell and unrestricted scanning are outside the product's initial scope.
+An active identity capability may be considered only after passive acceptance and offline-safety checks, with separate authorization and lab validation. No active capability is available today.
 
 ## Future integrations
 
-External tools can contribute records and claims through source-specific adapters. Matching and reconciliation happen before those claims alter a canonical asset. The first product milestones do not depend on those connectors being available.
+External tools may contribute records through selected adapters in a later phase. Integrations are not part of the current foundation work.

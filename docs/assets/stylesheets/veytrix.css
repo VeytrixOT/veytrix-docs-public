@@ -28,13 +28,16 @@ h1 { letter-spacing: -.035em; }
   outline: 3px solid var(--veytrix-teal);
   outline-offset: 3px;
 }
+.md-typeset a.veytrix-button:focus-visible { color: var(--veytrix-midnight); }
 .md-typeset .veytrix-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(17rem, .85fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
   align-items: center;
   margin: 1.5rem 0 3.5rem;
   padding: clamp(1.6rem, 5vw, 4rem);
+  min-width: 0;
+  box-sizing: border-box;
   background: linear-gradient(130deg, #041f3d 0%, #06273b 58%, #053445 100%);
   border-left: .18rem solid var(--veytrix-blue);
 }
@@ -56,6 +59,7 @@ h1 { letter-spacing: -.035em; }
 }
 .md-typeset .veytrix-button:hover { background: var(--veytrix-teal); color: var(--veytrix-midnight); }
 .veytrix-hero__diagram {
+  min-width: 0;
   border: 1px solid #24546a;
   background: #061b2b;
   padding: 1.2rem;
@@ -70,6 +74,18 @@ h1 { letter-spacing: -.035em; }
 .md-typeset table:not([class]) { background: #071d2e; }
 .md-typeset table:not([class]) th { background: var(--veytrix-navy); }
 
-@media (max-width: 55rem) {
-  .md-typeset .veytrix-hero { grid-template-columns: 1fr; }
+@media (max-width: 35rem) {
+  .md-typeset .veytrix-hero h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
+}
+
+/* A single column is safe without container-query support. Enhance only when
+   the article itself is wide enough; MkDocs sidebars can narrow it on desktop. */
+.md-content__inner { container: veytrix-content / inline-size; }
+@supports (width: 1cqi) {
+  .md-typeset .veytrix-hero { gap: clamp(1.5rem, 4cqi, 3rem); }
+}
+@container veytrix-content (min-width: 54rem) {
+  .md-typeset .veytrix-hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  }
 }
