@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+:root {
+  --veytrix-blue: #00d4ff;
+  --veytrix-navy: #041f3d;
+  --veytrix-teal: #00c696;
+  --veytrix-cloud: #f3f6fa;
+  --veytrix-midnight: #04121f;
+  --md-primary-fg-color: var(--veytrix-navy);
+  --md-accent-fg-color: var(--veytrix-blue);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--veytrix-midnight);
+  --md-default-fg-color: var(--veytrix-cloud);
+  --md-typeset-a-color: var(--veytrix-blue);
+  --md-code-bg-color: #09283d;
+}
+
+body { font-family: 'Inter', Arial, sans-serif; }
+h1, h2, h3, .md-header__title { font-family: 'Sora', 'Inter', Arial, sans-serif; }
+h1 { letter-spacing: -.035em; }
+.md-header { background: #041f3d; border-bottom: 1px solid #1b4358; }
+.md-tabs { background: #041f3d; }
+.md-typeset { line-height: 1.75; }
+.md-typeset p, .md-typeset li { max-width: 74ch; }
+.md-typeset a:focus-visible, .md-typeset .veytrix-button:focus-visible {
+  outline: 3px solid var(--veytrix-teal);
+  outline-offset: 3px;
+}
+.md-typeset .veytrix-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(17rem, .85fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  margin: 1.5rem 0 3.5rem;
+  padding: clamp(1.6rem, 5vw, 4rem);
+  background: linear-gradient(130deg, #041f3d 0%, #06273b 58%, #053445 100%);
+  border-left: .18rem solid var(--veytrix-blue);
+}
+.veytrix-hero__tagline { color: var(--veytrix-teal); font-size: .85rem; font-weight: 600; }
+.md-typeset .veytrix-hero h1 {
+  color: var(--veytrix-cloud);
+  font-size: clamp(2rem, 3.2vw, 3.8rem);
+  line-height: 1.17;
+  margin: .8rem 0 1.2rem;
+}
+.md-typeset .veytrix-hero p { color: #d3e4ed; font-size: 1.02rem; }
+.md-typeset .veytrix-button {
+  display: inline-block;
+  background: var(--veytrix-blue);
+  color: var(--veytrix-midnight);
+  font-weight: 700;
+  padding: .55rem 1rem;
+  margin: .4rem 1rem .4rem 0;
+}
+.md-typeset .veytrix-button:hover { background: var(--veytrix-teal); color: var(--veytrix-midnight); }
+.veytrix-hero__diagram {
+  border: 1px solid #24546a;
+  background: #061b2b;
+  padding: 1.2rem;
+  overflow-x: auto;
+}
+.md-typeset .veytrix-hero__diagram pre { margin: 0; background: transparent; }
+.md-typeset .veytrix-hero__diagram code {
+  color: var(--veytrix-teal);
+  font-size: .72rem;
+  line-height: 1.85;
+}
+.md-typeset table:not([class]) { background: #071d2e; }
+.md-typeset table:not([class]) th { background: var(--veytrix-navy); }
+
+@media (max-width: 55rem) {
+  .md-typeset .veytrix-hero { grid-template-columns: 1fr; }
+}
