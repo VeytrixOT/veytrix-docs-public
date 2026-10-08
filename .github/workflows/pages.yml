@@ -26,6 +26,10 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Validate and build site
         run: mkdocs build --strict
+      - name: Check rendered homepage hero structure
+        run: python scripts/check_hero.py
+      - name: Test hero structure checker
+        run: python -m unittest discover -s tests
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
