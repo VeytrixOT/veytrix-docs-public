@@ -1,6 +1,6 @@
 # Data and plugin concepts
 
-The planned data model separates four concepts; implementation and released interfaces may change these descriptions. Locally tested Central service foundations now provide protected ingestion and reads, but do not yet perform discovery or reconciliation:
+The planned data model separates four concepts; implementation and released interfaces may change these descriptions. Contract, passive plugin SDK, Web foundations, and a disposable software integration path have been implemented and locally tested. Target-host validation and deployment remain in progress. These foundations are not a released service and do not provide device discovery or reconciliation:
 
 | Concept | Meaning |
 | --- | --- |
@@ -9,6 +9,6 @@ The planned data model separates four concepts; implementation and released inte
 | Canonical asset | A reconciled identity whose selected fields can be explained by evidence. |
 | Relationship | A time-aware link between assets, interfaces, addresses, networks, or protocols. |
 
-In the intended workflow, sources produce observations, interpretation adds evidence, and reconciliation would select or flag asset identity. Parsers, plugins, reconciliation and graph views remain planned; current reads can return a valid empty inventory because no discovery or reconciliation populates canonical assets yet.
+In the intended workflow, sources produce observations, interpretation adds evidence, and reconciliation would select or flag asset identity. The plugin SDK foundation does not establish support for any vendor device. Parsers, device-specific plugins, reconciliation and graph views remain planned; an empty UI or inventory response does not prove discovery has occurred.
 
-Shared evidence and contract foundations exist, and Central service code has been locally tested. Phase 2 acceptance review is pending; these foundations are not a deployed or publicly available service. No wire format has been publicly released. These descriptions are conceptual and may change as the work progresses. Consult each implementation repository's README for its current status and setup.
+Shared contracts, passive plugin SDK, Web foundations and software integration have been locally tested. Phase 2 was approved and merged; Phase 3 software acceptance is complete, while actual target-host validation remains pending. These foundations are not released, deployed, or publicly available as a product. Real-PCAP validation follows target-host checks and separate readiness authorization. These descriptions are conceptual and may change as the work progresses. Consult each implementation repository's README for its current status and setup.
