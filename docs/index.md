@@ -6,7 +6,7 @@
 
 # A clearer view of critical operations.
 
-Veytrix is in development. Shared contract validation and local dependency tooling have been implemented and locally tested. The wider foundation—including Central, Sensor and Web applications—and the inventory product remain in development; there is no deployed discovery or asset platform.
+Veytrix is in development. Evidence and contract foundations and a locally tested Central service foundation now exist. Sensor, Web, passive inventory and discovery remain planned; deployment and integration validation are still ahead. No discovery or asset platform is available today.
 
 [Explore the platform](platform/overview.md){ .veytrix-button } [See the architecture](platform/how-it-works.md){ .veytrix-link }
 
